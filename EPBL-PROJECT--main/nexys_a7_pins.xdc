@@ -1,0 +1,37 @@
+## constraints/nexys_a7_pins.xdc
+## Clock Signal Configuration (50 MHz Derivation Window)
+set_property PACKAGE_PIN E3 [get_ports clk_50m]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_50m]
+create_clock -add -name sys_clk_pin -period 20.00 -waveform {0 10} [get_ports clk_50m]
+
+## Push Buttons and Switches Asynchronous Mapping
+set_property PACKAGE_PIN C12 [get_ports rst_btn]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_btn]
+set_property PACKAGE_PIN J15 [get_ports veh_ns_raw]
+set_property IOSTANDARD LVCMOS33 [get_ports veh_ns_raw]
+set_property PACKAGE_PIN L16 [get_ports veh_ew_raw]
+set_property IOSTANDARD LVCMOS33 [get_ports veh_ew_raw]
+set_property PACKAGE_PIN M13 [get_ports ped_btn_raw]
+set_property IOSTANDARD LVCMOS33 [get_ports ped_btn_raw]
+set_property PACKAGE_PIN R15 [get_ports emergency_raw]
+set_property IOSTANDARD LVCMOS33 [get_ports emergency_raw]
+set_property PACKAGE_PIN R17 [get_ports night_raw]
+set_property IOSTANDARD LVCMOS33 [get_ports night_raw]
+
+## Output LED Drive Mapping
+set_property PACKAGE_PIN H17 [get_ports NS_G]
+set_property IOSTANDARD LVCMOS33 [get_ports NS_G]
+set_property PACKAGE_PIN K15 [get_ports NS_Y]
+set_property IOSTANDARD LVCMOS33 [get_ports NS_Y]
+set_property PACKAGE_PIN J13 [get_ports NS_R]
+set_property IOSTANDARD LVCMOS33 [get_ports NS_R]
+set_property PACKAGE_PIN N14 [get_ports EW_G]
+set_property IOSTANDARD LVCMOS33 [get_ports EW_G]
+set_property PACKAGE_PIN R18 [get_ports EW_Y]
+set_property IOSTANDARD LVCMOS33 [get_ports EW_Y]
+set_property PACKAGE_PIN V17 [get_ports EW_R]
+set_property IOSTANDARD LVCMOS33 [get_ports EW_R]
+set_property PACKAGE_PIN U14 [get_ports PED_WALK]
+set_property IOSTANDARD LVCMOS33 [get_ports PED_WALK]
+set_property PACKAGE_PIN V14 [get_ports PED_DONT]
+set_property IOSTANDARD LVCMOS33 [get_ports PED_DONT]
